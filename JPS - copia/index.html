@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/screen.css" />
+    <link rel="stylesheet" href="css/svg.css" media="all" />
+    <title>JPSA*</title>
+  </head>
+  <body>
+    <div class="page">
+      <h2 style="margin-top: 50px; text-align: center;">JUMP POINT SEARCH A*</h2>
+      <article>
+        <section>
+
+          <div class="interactive-container">
+            <div class="interactive-grid" style="margin-left: 100px;" data-size="11,5">
+              <svg width="916" height="628">
+                <g transform="translate(1,313)">
+                  <g transform="scale(1,-1)" class="map">
+                    
+                    <rect x="0" y="0" width="48" height="48" class="start"></rect>
+                    <rect x="24" y="0" width="48" height="48" class="clear"></rect>
+                    <rect x="48" y="0" width="48" height="48" class="clear"></rect>
+                    <rect x="72" y="0" width="48" height="48" class="clear"></rect>
+                    <rect x="96" y="0" width="48" height="48" class="clear"></rect>
+                    <rect x="120" y="0" width="48" height="48" class="clear"></rect>
+                    <rect x="144" y="0" width="48" height="48" class="clear"></rect>
+                    <rect x="168" y="0" width="48" height="48" class="clear"></rect>
+                    <rect x="192" y="0" width="48" height="48" class="clear"></rect>
+                    <rect x="216" y="0" width="48" height="48" class="clear"></rect>
+                    <rect x="240" y="0" width="48" height="48" class="clear"></rect>
+
+                    <rect x="0" y="24" width="48" height="48" class="clear"></rect>
+                    <rect x="24" y="24" width="48" height="48" class="clear"></rect>
+                    <rect x="48" y="24" width="48" height="48" class="clear"></rect>
+                    <rect x="72" y="24" width="48" height="48" class="clear"></rect>
+                    <rect x="96" y="24" width="48" height="48" class="clear"></rect>
+                    <rect x="120" y="24" width="48" height="48" class="clear"></rect>
+                    <rect x="144" y="24" width="48" height="48" class="clear"></rect>
+                    <rect x="168" y="24" width="48" height="48" class="clear"></rect>
+                    <rect x="192" y="24" width="48" height="48" class="clear"></rect>
+                    <rect x="216" y="24" width="48" height="48" class="clear"></rect>
+                    <rect x="240" y="24" width="48" height="48" class="clear"></rect>
+
+                    <rect x="0" y="48" width="48" height="48" class="clear"></rect>
+                    <rect x="24" y="48" width="48" height="48" class="clear"></rect>
+                    <rect x="48" y="48" width="48" height="48" class="clear"></rect>
+                    <rect x="72" y="48" width="48" height="48" class="clear"></rect>
+                    <rect x="96" y="48" width="48" height="48" class="clear"></rect>
+                    <rect x="120" y="48" width="48" height="48" class="clear"></rect>
+                    <rect x="144" y="48" width="48" height="48" class="clear"></rect>
+                    <rect x="168" y="48" width="48" height="48" class="clear"></rect>
+                    <rect x="192" y="48" width="48" height="48" class="clear"></rect>
+                    <rect x="216" y="48" width="48" height="48" class="clear"></rect>
+                    <rect x="240" y="48" width="48" height="48" class="clear"></rect>
+
+                    <rect x="0" y="72" width="48" height="48" class="clear"></rect>
+                    <rect x="24" y="72" width="48" height="48" class="clear"></rect>
+                    <rect x="48" y="72" width="48" height="48" class="clear"></rect>
+                    <rect x="72" y="72" width="48" height="48" class="clear"></rect>
+                    <rect x="96" y="72" width="48" height="48" class="clear"></rect>
+                    <rect x="120" y="72" width="48" height="48" class="clear"></rect>
+                    <rect x="144" y="72" width="48" height="48" class="clear"></rect>
+                    <rect x="168" y="72" width="48" height="48" class="clear"></rect>
+                    <rect x="192" y="72" width="48" height="48" class="clear"></rect>
+                    <rect x="216" y="72" width="48" height="48" class="clear"></rect>
+                    <rect x="240" y="72" width="48" height="48" class="clear"></rect>
+
+                    <rect x="0" y="96" width="48" height="48" class="clear"></rect>
+                    <rect x="24" y="96" width="48" height="48" class="clear"></rect>
+                    <rect x="48" y="96" width="48" height="48" class="clear"></rect>
+                    <rect x="72" y="96" width="48" height="48" class="clear"></rect>
+                    <rect x="96" y="96" width="48" height="48" class="clear"></rect>
+                    <rect x="120" y="96" width="48" height="48" class="clear"></rect>
+                    <rect x="144" y="96" width="48" height="48" class="clear"></rect>
+                    <rect x="168" y="96" width="48" height="48" class="clear"></rect>
+                    <rect x="192" y="96" width="48" height="48" class="clear"></rect>
+                    <rect x="216" y="96" width="48" height="48" class="clear"></rect>
+                    <rect x="240" y="96" width="48" height="48" class="goal"></rect>
+                  
+                  </g>
+
+                  <g transform="scale(1,-1)" class="annotations">
+                    <g class="squares"></g>
+                    <g class="extras"></g>
+                    <g class="paths"></g>
+                    
+                    <defs>
+                      <marker id="arrowhead-current" orient="auto" viewBox="0 0 10 10" refX="6" refY="5">
+                        <polyline points="0,0 10,5 0,10 1,5"></polyline>
+                      </marker>
+                      <marker id="arrowhead-previous" orient="auto" viewBox="0 0 10 10" refX="6" refY="5">
+                        <polyline points="0,0 10,5 0,10 1,5"></polyline>
+                      </marker>
+                      <marker id="arrowhead-examined" orient="auto" viewBox="0 0 10 10" refX="6" refY="5">
+                        <polyline points="0,0 10,5 0,10 1,5"></polyline>
+                      </marker>
+                    </defs>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <div class="interactive-controls" style="text-align: center; margin-top: 25px;">
+              <button class="reset" type="submit" style="display:none">Edit</button>
+              <button class="start" type="submit">Find Path</button>
+              <button class="stop" type="submit" style="display:none">Stop</button>
+            <!-- 
+              <label>
+                <input type="checkbox" name="jps" value="jps">
+                With JPS
+              </label>
+            -->
+            </div>
+          </div>
+
+        </section>
+      </article>
+    </div>
+    
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
